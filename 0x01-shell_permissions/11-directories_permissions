@@ -1,2 +1,2 @@
 #!/bin/bash
-file -type d -exec chmod 0755 {}+
+file -type d -exec chmod 0755 {}

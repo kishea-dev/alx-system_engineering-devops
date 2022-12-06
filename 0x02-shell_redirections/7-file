@@ -1,2 +1,22 @@
 #!/bin/bash
-echo \\*\\\\\'\"Best School\"\\\'\\\\*\$\\\?\\*\\*\\*\\*\\*\:\)
+find . -type d -path ./0-hello_world ./10-no_more_js ./11-directories ./12-newest_files ./1-confused_smiley ./2-hellofile ./3-twofiles ./4-lastlines ./5-firstlines ./6-third_line ./7-file ./8-cwd_state ./9-duplicate_last_line ./iacta
+echo $COMMAND >> $FILE &&
+chmod u+x $FILE &&
+git add $FILE &&
+git commit -m "new file $FILE added" &&
+git push
+
+
+
+FILE=10-no_more_js
+COMMAND=find ./ls_cwd_content
+echo $COMMAND >> $FILE &&
+chmod u+x $FILE &&
+git add $FILE &&
+git commit -m "new file $FILE added" &&
+git push
+
+
+
+FILE=9-duplicate_last_line
+COMMAND=tail ./README.md -print | wc -l

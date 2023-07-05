@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Installs HAProxy:
+# Distributes requests using a round-robin algorithm.
+
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
+sudo sed -i "$ a\listen 197148-web-01\n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\toption httpclose\n\toption forwardfor\n\tserver 197148-web-02 34.207.64.39:80 check\n\tserver 197148-web-01 54.83.128.139:80  check" /etc/haproxy/haproxy.cfg
+# sudo service haproxy start
+sudo /etc/init.d/haproxy start

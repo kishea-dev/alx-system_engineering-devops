@@ -47,7 +47,7 @@ frontend  kishea-frontend
 
 backend kishea-backend
     balance roundrobin
-	server 66254-web-02 54.237.29.109:80 check
-    server 66254-web-01 34.239.249.57:80 check
+	server 197148-web-02 34.207.64.39:80 check
+    server 197148-web-01 54.83.128.139:80 check
 #end
 
